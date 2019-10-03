@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json({ extended: false }));
 app.use(express.static(path.join(__dirname, "static")));
 
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 //this is because the smtp user is the same as the receiving mail
 const contactAddress = config.to;
