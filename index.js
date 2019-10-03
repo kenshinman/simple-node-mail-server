@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, "static")));
 const PORT = 5000 || process.env.PORT;
 
 //this is because the smtp user is the same as the receiving mail
-const contactAddress = config.user;
+const contactAddress = config.to;
 
 const mailer = nodemailer.createTransport({
   host: config.host,
